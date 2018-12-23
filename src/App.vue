@@ -3,21 +3,13 @@
     <nav class="navbar is-primary">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          <h1>Mediator</h1> 
         </a>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-item">
-          <router-link to="/">Home</router-link>
-        </div>
-        <div class="navbar-item">
-          <router-link to="/about">About</router-link>
-        </div>
       </div>
     </nav>    
     <div class="columns">
       <div class="column is-3">
-        <aside class="menu is-secondary">
+        <aside class="menu is-dark">
           <p class="menu-label">
             General
           </p>
@@ -35,7 +27,7 @@
           <ul class="menu-list">
             <li><router-link to="/add-report">Add Report</router-link></li>
             <li>
-              <a class="is-active">Manage Your Team</a>
+              <a >Manage Your Team</a>
               <ul>
                 <li><a>Members</a></li>
                 <li><a>Plugins</a></li>
@@ -52,6 +44,16 @@
   </div>
 </template>
 <script>
+export default {
+  name: 'app',
+  methods: {
+    activeLink(el) {
+      // eslint-disable-next-line
+      console.log(el)
+      el.classList.add('is-active')
+    }
+  }
+}
 
 </script>
 
