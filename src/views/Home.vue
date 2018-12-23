@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="title">Online Doctors</h1>
+    <table class="table is-hoverable  is-fullwidth">
+      <thead>
+        <th>Nome</th>
+        <th>Service</th>
+        <th>Location</th>
+      </thead>
+      <tbody>
+        <tr v-for="(doctor, index) in doctors()" :key="index">
+          <td><a href="#">{{doctor.name}}</a></td>
+          <td>{{doctor.service}}</td>
+          <td>{{doctor.hospital}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  methods: {
+    doctors() {
+      return this.$store.state.doctors
+    }
   }
 }
 </script>

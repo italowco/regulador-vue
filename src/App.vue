@@ -16,8 +16,8 @@
       </div>
     </nav>    
     <div class="columns">
-      <div class="column is-one-quarter">
-        <aside class="menu">
+      <div class="column is-3">
+        <aside class="menu is-secondary">
           <p class="menu-label">
             General
           </p>
@@ -33,7 +33,7 @@
             Administration
           </p>
           <ul class="menu-list">
-            <li><a>Team Settings</a></li>
+            <li><router-link to="/add-report">Add Report</router-link></li>
             <li>
               <a class="is-active">Manage Your Team</a>
               <ul>
@@ -45,10 +45,8 @@
           </ul>
         </aside>
       </div>
-      <div class="column">
-        <div class="container">
+      <div class="column is-9">
           <router-view/>
-        </div>
       </div>
     </div> 
   </div>
@@ -57,9 +55,13 @@
 
 </script>
 
-<style scoped>
+<style>
 .menu {
   padding-top: 0.5rem;
   padding-left: 0.5rem;
 }
+.dashboard-content {
+  width: 75%;
+}
+
 </style>
