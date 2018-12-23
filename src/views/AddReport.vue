@@ -1,5 +1,11 @@
 <template>
     <div>
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="#">Administration</a></li>
+                <li class="is-active"><a href="#" aria-current="page">Add Report</a></li>
+            </ul>
+        </nav>
         <h1 class="title">
             Add Report
         </h1>    
@@ -27,10 +33,12 @@ export default {
     },
     methods: {
         addReport(e) {
-            const report = e
-            this.$store.dispatch('addReport', {title: report.title , desease: report.desease})
-            e.title = ''
-            e.desease = ''
+            if(e.title != '' && e.desease != ''){
+                const report = e
+                this.$store.dispatch('addReport', {title: report.title , desease: report.desease})
+                e.title = ''
+                e.desease = ''    
+            }
         }
     }
 }

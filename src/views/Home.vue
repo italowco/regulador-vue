@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <h1 class="title">Online Doctors</h1>
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="#">General</a></li>
+      <li class="is-active"><a href="#" aria-current="page">Online Doctors</a></li>
+    </ul>
+    </nav>
+    <h1 class="title"></h1>
     <table class="table is-hoverable  is-fullwidth">
       <thead>
         <th>Nome</th>

@@ -2,10 +2,8 @@
 <div>
   <nav class="breadcrumb" aria-label="breadcrumbs">
     <ul>
-      <li><a href="#">Bulma</a></li>
-      <li><a href="#">Documentation</a></li>
-      <li><a href="#">Components</a></li>
-      <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+      <li><a href="#">General</a></li>
+      <li class="is-active"><a href="#" aria-current="page">Reports</a></li>
     </ul>
   </nav>
   <div class="container">
@@ -30,7 +28,8 @@ export default {
     resolveReport(e) {
         this.$store.dispatch('removeReport', e)
     }
-  }
+  },
+
 
 }
 </script>

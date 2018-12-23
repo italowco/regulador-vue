@@ -5,17 +5,21 @@
                 <p class="modal-card-title">{{report.title}}</p>
             </header>
             <section class="modal-card-body">
+                <p class="title is-6">Description</p>
                 <div class="card-content">
                     <div class="content">
                         <p>{{report.desease}}</p>
                     </div>
                 </div>
             <b-field label="Online Doctors">
-                <b-select placeholder="Select a character" icon="account">
+                <b-select placeholder="Select a doctor" icon="account">
                     <optgroup :label="key" v-for="(doctors, key, index) in doctorsByService()" :key="index">
                         <option v-for="(doctor, index) in doctors" :value="doctor.name" :key="index"> {{doctor.name}} | Location: {{doctor.hospital}}</option>
                     </optgroup>
                 </b-select>
+            </b-field>
+            <b-field label="Observations">
+                <b-input type="textarea"></b-input>
             </b-field>
             </section>
             <footer class="modal-card-foot">

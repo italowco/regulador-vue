@@ -11,7 +11,7 @@
             </div>
         </div>
         <footer class="card-footer">
-            <a class="card-footer-item" @click="isModalActive = true">See More</a>
+            <a class="card-footer-item" @click="isModalActive = true">Sign To Doctor</a>
         </footer>
         <b-modal :active.sync="isModalActive">
             <ReportModal :report="report"></ReportModal>
