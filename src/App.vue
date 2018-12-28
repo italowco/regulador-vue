@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar is-primary">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="#">
           <h1>Mediator</h1> 
         </a>
       </div>
@@ -27,6 +27,9 @@
             </li>
             <li>
               <router-link to="/report">Report</router-link>
+            </li>
+            <li>
+              <router-link to="/login">Login</router-link>
             </li>
           </ul>
           <p class="menu-label">

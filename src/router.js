@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Report from './views/Report'
 import AddReport from './views/AddReport'
+import Login from './views/Login'
 
 Vue.use(Router)
 
@@ -13,6 +14,10 @@ export default new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/login',
+      component: Login
     },
     {
       path: '/report',
@@ -26,5 +31,4 @@ export default new Router({
     }
   ],
   linkActiveClass: "is-active",
-  linkExactActiveClass: "is-active"
 })
