@@ -1,4 +1,4 @@
-# awesome-project
+# regulador-vue
 
 ## Project setup
 ```
